@@ -124,9 +124,10 @@ GOOGLE_CLIENT_ID=
 GOOGLE_CLIENT_SECRET=
 GOOGLE_REFRESH_TOKEN=
 DATABASE_URL=
-ANTHROPIC_API_KEY=
-CLASSIFIER_MODEL=anthropic:claude-haiku-5-5
-AGENT_MODEL=anthropic:claude-sonnet-5-5
+# ANTHROPIC_API_KEY=<removed; provider switched to Google Gemini>
+GOOGLE_API_KEY=
+CLASSIFIER_MODEL=google:gemini-3.8-flash
+AGENT_MODEL=google:gemini-3.8-flash
 POLL_INTERVAL_SECONDS=30
 DASHBOARD_USERNAME=admin
 DASHBOARD_PASSWORD=
@@ -381,5 +382,3 @@ ssh -L 8080:localhost:8080 support-vps
 - Add an order lookup tool so the agent can check delivery dates instead of escalating them.
 - Grow the golden set with every email the system gets wrong.
 - Production additions: webhooks instead of polling, queues and workers for volume, retries with backoff, tracing for every model call, and a workflow engine (see the Datalumina GenAI Launchpad and GenAI Accelerator).
-
-
